@@ -23,11 +23,36 @@
 |image|text|-------|
 |prefecture_id|references|null: false,foreign_key: true|
 
-###Association
+### Association
 - has_many :comments
-- has_many :users_groups
-- has_many :groups, through: :users_groups
+- has_many :items
+- has_many :trade_messages
+- has_many :likes
+- has_many :users_notices
+- has_many :notices, through: :users_notices
+- has_many :users_todo
+- has_many :todos, through: :users_todos
+- has_one :pay
+- has_one :point
+- has_one :profit
 
+## users_noticesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|notice_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :notice
+
+## users_todosテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|todo_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :todo
 
 ## paysテーブル
 Column|Type|Options|
@@ -38,7 +63,7 @@ Column|Type|Options|
 |month|integer|null: false|
 |security_number|integer|null: false|
 
-###Association
+### Association
 - belongs_to :user
 
 ## evalutionsテーブル
@@ -47,7 +72,7 @@ Column|Type|Options|
 |user_id|references|null: false, foreign_key: true|
 |name|string|null: false|
 ### Association
-- has_many :user
+- has_many :users
 
 
 ## likesテーブル
@@ -57,17 +82,17 @@ Column|Type|Options|
 |item_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :item
+- has_many :items
 
 ## trade_messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
 |item_id|references|null: false, foreign_key: true|
-|text|text|------|
+|text|----|------|
 ### Association
 - belongs_to :user
-- has_many: item
+- has_many: items
 
 ## profitテーブル
 |Column|Type|Options|
@@ -75,7 +100,6 @@ Column|Type|Options|
 |user_id|references|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :user
 - belongs_to :item
 
 ## itemsテーブル
@@ -85,22 +109,24 @@ Column|Type|Options|
 |buyer_id|references|foreign_key: true|
 |name|string|null: false, index|
 |price|integer|null: false|
+|shipping_date|date|null: false|
 |condition|string|null: false|
 |delivery_method|string|-------|
+|region|string|null: false|
 |postage|integer|------|
 |image_id|references|null: false, foreign_key: true|
 
 
-###Association
+### Association
 - belongs_to :user
 - belongs_to:todo
 - belongs_to:notice
 - belongs_to:brand
 - belongs_to:categries
 - belongs_to:profit
-- has_many:trade_message
-- has_many:comment
-- has_many:image
+- has_many:trade_messages
+- has_many:comments
+- has_many:images
 
 ## imagesテーブル
 |Column|Type|Options|
@@ -115,14 +141,14 @@ Column|Type|Options|
 |------|----|-------|
 |name|string|-------|
 ### Association
-- has_many :user
+- has_many :users
 
 ## categriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |parent_id|references|null: false, foreign_key: true|
 ### Association
-- has_many :user
+- has_many :users
 
 
 ## todosテーブル
@@ -131,17 +157,19 @@ Column|Type|Options|
 |user_id|references|null: false, foreign_key: true|
 |title|string|null: false|
 ### Association
-- belongs_to :user
-- belongs_to :group
+- belongs_to :item
+- has_many :users_todos
+- has_many :todo, through: :users_todos
 
 ## noticeテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null: false, foreign_key: true|
 |title|string|null: false|
 |text|text|null: false|
 ### Association
 - belongs_to :item
+- has_many :users_notices
+- has_many :users, through: :users_groups
 
 
 ## commentsテーブル
@@ -159,10 +187,11 @@ Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
 ### Association
-
+- belongs_to :user
 
 ## prefecturessテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
 ### Association
+- has_many :users
