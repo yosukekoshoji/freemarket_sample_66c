@@ -24,17 +24,13 @@
 - has_many :items ,dependent: :destroy
 - has_many :trade_messages
 - has_many :likes,dependent: :destroy
-- has_many :users_notices
-- has_many :notices, through: :users_notices
-- has_many :users_todos
-- has_many :todos, through: :users_todos
 - has_many :evalutions,dependent: :destroy
 - has_one :pay
 - has_one :point
 - has_one :profit
 - has_one :address
 
-
+## notices = お知らせ情報
 ## users_noticesテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -44,6 +40,7 @@
 - belongs_to :user
 - belongs_to :notice
 
+## todos = やることリスト
 ## users_todosテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -122,8 +119,6 @@ Column|Type|Options|
 
 ### Association
 - belongs_to :user
-- belongs_to:todo
-- belongs_to:notice
 - belongs_to:brand
 - belongs_to:category
 - belongs_to:profit
@@ -155,26 +150,6 @@ Column|Type|Options|
 ### Association
 - has_many :items
 
-
-## todosテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|references|null: false, foreign_key: true|
-|title|string|null: false|
-### Association
-- belongs_to :item
-- has_many :users_todos
-- has_many :todo, through: :users_todos
-
-## noticeテーブル
-|Column|Type|Options|
-|------|----|-------|
-|title|string|null: false|
-|text|text|null: false|
-### Association
-- belongs_to :item
-- has_many :users_notices
-- has_many :users, through: :users_notices
 
 
 ## commentsテーブル
