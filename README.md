@@ -16,25 +16,24 @@
 |birthday|integer|null: false|
 |password|string|null: false|
 |introduction|text|-------|
-|zipcode|string|null: false|
-|first_address|string|null: false|
-|second_address|string|null: false|
-|third_address|string|-------|
 |image|text|-------|
 |prefecture_id|references|null: false,foreign_key: true|
 
 ### Association
 - has_many :comments
-- has_many :items
+- has_many :items ,dependent: :destroy
 - has_many :trade_messages
-- has_many :likes
+- has_many :likes,dependent: :destroy
 - has_many :users_notices
 - has_many :notices, through: :users_notices
 - has_many :users_todo
 - has_many :todos, through: :users_todos
+- has_many :evalutions,dependent: :destroy
 - has_one :pay
 - has_one :point
 - has_one :profit
+- has_one :address
+
 
 ## users_noticesテーブル
 |Column|Type|Options|
@@ -54,6 +53,8 @@
 - belongs_to :user
 - belongs_to :todo
 
+
+
 ## paysテーブル
 Column|Type|Options|
 |------|----|-------|
@@ -70,9 +71,11 @@ Column|Type|Options|
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
+|reviewer_id|references|null: false, foreign_key: true|
+|seller_id|references|null: false, foreign_key: true|
 |name|string|null: false|
 ### Association
-- has_many :users
+- belongs_to :users
 
 
 ## likesテーブル
@@ -82,7 +85,7 @@ Column|Type|Options|
 |item_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :items
+- belongs_to :items
 
 ## trade_messagesテーブル
 |Column|Type|Options|
@@ -127,6 +130,7 @@ Column|Type|Options|
 - has_many:trade_messages
 - has_many:comments
 - has_many:images
+- has_many:likes,dependent: :destroy
 
 ## imagesテーブル
 |Column|Type|Options|
@@ -189,9 +193,13 @@ Column|Type|Options|
 ### Association
 - belongs_to :user
 
-## prefecturessテーブル
+## addressテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
+|zipcode|string|null: false|
+|first_address|string|null: false|
+|second_address|string|null: false|
+|third_address|string|-------|
 ### Association
-- has_many :users
+- belongs_to :users
