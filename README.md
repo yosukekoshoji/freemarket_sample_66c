@@ -25,7 +25,7 @@
 - has_many :trade_messages
 - has_many :likes,dependent: :destroy
 - has_many :evalutions,dependent: :destroy
-- has_one :pay
+- has_one :card
 - has_one :point
 - has_one :profit
 - has_one :address
@@ -52,7 +52,7 @@
 
 
 
-## paysテーブル
+## cardsテーブル
 Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
