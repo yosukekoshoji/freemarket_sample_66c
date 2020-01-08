@@ -83,7 +83,7 @@ Column|Type|Options|
 |------|----|-------|
 |seller_id|references|foreign_key: true|
 |buyer_id|references|foreign_key: true|
-|name|string|null: false|
+|name|string|null: false, index|
 |price|integer|null: false|
 |condition|string|null: false|
 |delivery_method|string|-------|
