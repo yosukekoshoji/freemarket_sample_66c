@@ -26,7 +26,7 @@
 - has_many :likes,dependent: :destroy
 - has_many :users_notices
 - has_many :notices, through: :users_notices
-- has_many :users_todo
+- has_many :users_todos
 - has_many :todos, through: :users_todos
 - has_many :evalutions,dependent: :destroy
 - has_one :pay
@@ -125,7 +125,7 @@ Column|Type|Options|
 - belongs_to:todo
 - belongs_to:notice
 - belongs_to:brand
-- belongs_to:categrie
+- belongs_to:category
 - belongs_to:profit
 - has_many:trade_messages
 - has_many:comments
@@ -147,7 +147,7 @@ Column|Type|Options|
 ### Association
 - has_many :items
 
-## categriesテーブル
+## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false ,unique: true|
