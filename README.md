@@ -75,7 +75,7 @@ Column|Type|Options|
 |seller_id|references|null: false, foreign_key: true|
 |name|string|null: false|
 ### Association
-- belongs_to :users
+- belongs_to :user
 
 
 ## likesテーブル
@@ -85,7 +85,7 @@ Column|Type|Options|
 |item_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- belongs_to :items
+- belongs_to :item
 
 ## trade_messagesテーブル
 |Column|Type|Options|
@@ -125,7 +125,7 @@ Column|Type|Options|
 - belongs_to:todo
 - belongs_to:notice
 - belongs_to:brand
-- belongs_to:categries
+- belongs_to:categrie
 - belongs_to:profit
 - has_many:trade_messages
 - has_many:comments
@@ -143,16 +143,17 @@ Column|Type|Options|
 ## brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|-------|
+|name|string|null,false|
 ### Association
-- has_many :users
+- has_many :items
 
 ## categriesテーブル
 |Column|Type|Options|
 |------|----|-------|
+|name|string|null: false ,unique: true|
 |parent_id|references|null: false, foreign_key: true|
 ### Association
-- has_many :users
+- has_many :items
 
 
 ## todosテーブル
@@ -173,7 +174,7 @@ Column|Type|Options|
 ### Association
 - belongs_to :item
 - has_many :users_notices
-- has_many :users, through: :users_groups
+- has_many :users, through: :users_notices
 
 
 ## commentsテーブル
@@ -193,7 +194,7 @@ Column|Type|Options|
 ### Association
 - belongs_to :user
 
-## addressテーブル
+## addressesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
@@ -202,4 +203,4 @@ Column|Type|Options|
 |second_address|string|null: false|
 |third_address|string|-------|
 ### Association
-- belongs_to :users
+- belongs_to :user
