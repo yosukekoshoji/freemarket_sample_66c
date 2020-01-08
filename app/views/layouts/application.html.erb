@@ -11,14 +11,42 @@
 
   <body>
   <header>
+    <div class="top">
+      <%= image_tag "/assets/images/SVG/fmarket_logo_red.svg", class: 'top--logo'%>
+      <div class="top__search">
+        <i class="fas fa-search"></i>
+      </div>
+    </div>  
+
+    <div class="bottom">
+      <div class="bottom__detail">
+        <div class="bottom__detail--categories">
+          <i class="fas fa-list"></i>
+          カテゴリーから探す
+        </div>
+        <div class="bottom__detail--brand">
+          <i class="fas fa-tags"></i>
+          ブランドから探す
+        </div>
+      </div>
+      <div class="bottom__sign">
+        <div class="bottom__sign--up">
+          新規会員登録
+        </div>
+        <div class="bottom__sign--in">
+          ログイン
+        </div>
+      </div>
+    </div>
 
   </header>
+
+  <%= yield %>
 
   <footer>
   </footer>
 
 
 
-    <%= yield %>
   </body>
 </html>
