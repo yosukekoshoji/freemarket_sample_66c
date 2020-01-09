@@ -101,7 +101,6 @@
   }
 }
 .wrapper{
-  // height: auto;
   .top__content{
     font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
     &--header{
@@ -123,7 +122,7 @@
             padding: 0.3em 1em;
             font-weight: bold;
             background-color: rgb(239, 239, 239);
-            border-radius: 20px;/*角の丸み*/
+            border-radius: 20px;
             font-size: 14px;
             margin: 0px -10px;
 
