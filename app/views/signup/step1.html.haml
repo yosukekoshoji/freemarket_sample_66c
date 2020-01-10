@@ -1,0 +1,54 @@
+.fmarket__logo
+  = image_tag "/assets/images/SVG/fmarket_logo_red.svg"
+.MemberInformationInput
+  .MemberInformationInput__title
+    会員情報入力
+  .MemberInformationInput__content
+    .MemberInformationInput__content--form
+    %form{:action => "#", :method => "post"}
+      %label
+        ニックネーム
+      %span
+        必須
+      %br/
+      %input{:name => "name", :type => "text"}/
+      %br/
+
+      %label
+        メールアドレス
+      %span
+        必須
+      %br/
+      %input{:name => "name", :type => "text"}/
+      %br/
+      %p
+        ※ 英字と数字の両方を含めて設定してください
+
+      %input#password.field{:type => "password", :value => "hogehoge"}/
+      %input#password-check{:type => "checkbox"}/
+      %p
+        パスワードを表示する
+
+      .Identification
+        本人確認
+      .Identification--text
+        安心・安全にご利用いただくために、お客さまの本人
+        %br/
+        情報の登録にご協力ください。他のお客さ
+        %br/
+        まに公開されることはありません。
+
+ 
+    
+
+
+
+-# %form{:action => "#", :method => "post"}
+-#   %p
+-#     お名前（必須）：
+-#     %br/
+-#     %input{:name => "name", :type => "text"}/
+-#   %p
+-#     メールアドレス：
+-#     %br/
+-#     %input{:name => "mail", :type => "text"}/
