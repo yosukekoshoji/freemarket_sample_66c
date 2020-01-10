@@ -1,8 +1,6 @@
 // Place all the styles related to the toppage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-
 .top{
   display: flex;
   justify-content: space-between;
@@ -31,7 +29,6 @@
     outline: none;
   }
 }
-
 .bottom{
   display: flex;
   justify-content: space-between;
@@ -100,11 +97,6 @@
   }
   }
 }
-
-
-
-
-
 .wrapper{
   .top__content{
     font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
@@ -130,7 +122,6 @@
             border-radius: 20px;
             font-size: 14px;
             margin: 0px -10px;
-
           }
         }
       }
