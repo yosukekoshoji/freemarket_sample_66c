@@ -3,6 +3,10 @@
     %ul.side_bar__nav_bar_box
       %li
         = link_to "#",class: "nav_item"  do
+          マイページ
+          %i.fas.fa-chevron-right
+      %li
+        = link_to "#",class: "nav_item"  do
           お知らせ
           %i.fas.fa-chevron-right
       %li
@@ -104,21 +108,21 @@
             %i.fas.fa-chevron-right
 
   .user_page_main
-    .user_box
-      %a.user_box__contents
+    %a.user_box
+      .user_box__contents
         %img{src:"//static.mercdn.net/images/member_photo_noimage_thumb.png", width:"60",height:"60",style:"user-select: auto;"}
           %h2.user_box__contents__name
             太郎
         .user_box__contents__info
-          %div.user_box__contents__info__evalution
+          %h2.user_box__contents__info__evalution
             評価
             %span#count
             2
-          %div.user_box__contents__info__transactions
+          %h2.user_box__contents__info__transactions
             出品
             %span#count
             2
-        .user_box__contents__list
+
 
 
     .list_box
@@ -140,12 +144,26 @@
         = link_to "#",class: "nav_item"  do
           %i.fas.fa-chevron-right
       .list_box__list
+        %a.list_box__list__text 一覧を見る
 
     .purchased
-      .purchased__text_box
-      .purchased__notice
-      .purchased__todo
+      %h3.purchased__text_box
+        購入した商品
+      .purchased__tabs_box
+        .purchased__tabs_box__notice
+          取引中
+        .purchased__tabs_box__todo
+          過去の取引
       .purchased__notice_box
+        %img{src:"https://i.picsum.photos/id/444/350/250.jpg", width:"40",height:"40"}
+        .purchased__notice_box__text
+          「ゼンハイザー / イヤホンケース / イヤーピース」を購入しました。評価してください。
+          .purchased__notice_box__wait_tab
+            受取評価待ち          
+        = link_to "#",class: "nav_item"  do
+          %i.fas.fa-chevron-right
+        
       .purchased__list
-      
+        .purchased__list__text
+          一覧を見る
     
