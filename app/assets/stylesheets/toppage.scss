@@ -257,22 +257,20 @@ footer{
           width: auto;
         }
 }
-.footer-sub{
-  color: white;
-  margin: 30px auto 20px;
-  width: 70%;
-  margin: auto;
-  display: flex;
-
-  .footer-logo{
-    height: 40px;
+  .footer-sub{
+    color: white;
+    margin: 30px auto 20px;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    .footer-logo{
+      height: 40px;
+    }
+    .footer-inc{
+      margin: auto 300px;
+      font-size: 12px;
+    }
   }
-  .footer-inc{
-    margin: auto 300px;
-    font-size: 12px;
-  }
-
-}
 }
 
 
