@@ -1,0 +1,172 @@
+.user_page{
+  width:1020px;
+  height:100%;
+  background-color: green;
+  display:flex;
+  margin:auto;
+  margin-top:40px;
+  position: relative;
+  .side_bar{
+    width:280px;
+    height:100%;
+    float: left;
+    background-color: pink;
+    margin-right: 40px;
+    ul {
+      width:100%;
+      height:100%;
+      li{
+        position: relative;
+        width:100%;
+        height: 48px;
+        background-color:brown;
+      }
+        a{
+          line-height: 48px;
+          width:280px;
+          font-size: 14px;
+          padding:16px;
+          
+        }
+        
+          i{
+            position: absolute;
+            top:0px;
+            right:16px;
+            line-height: 48px;
+          }
+    }
+      
+    .side_bar__merupay_box{
+      margin-top:40px;
+      font-size: 16px;
+      &__nav_box{
+        width:100%;
+        height:100%;
+
+        li{
+          position: relative;
+          width:100%;
+          height: 48px;
+          background-color:brown;
+        
+          a{
+            line-height: 48px;
+            width:280px;
+            font-size: 14px;
+            padding:16px;
+            
+          }
+          
+          i{
+            position: absolute;
+            top:0px;
+            right:16px;
+            line-height: 48px;
+          }
+        }
+    }
+  }
+
+  .side_bar__profile_box{
+    margin-top:40px;
+    font-size: 16px;
+    &__nav_box{
+      width:100%;
+      height:100%;
+
+      li{
+        position: relative;
+        width:100%;
+        height: 48px;
+        background-color:brown;
+      
+        a{
+          line-height: 48px;
+          width:280px;
+          font-size: 14px;
+          padding:16px;
+          
+        }
+        
+        i{
+          position: fixed;
+          top:0px;
+          right:16px;
+          line-height: 48px;
+        }
+      }
+    }
+  }
+}
+  .user_page_main{
+    width:700px;
+    height:100%;
+  }
+    .user_box{
+      width:700px;
+      height: 200px;
+      background-color: yellow;
+      float: left;
+      &__contents{
+        width:100%;
+        height: 100%;
+      }
+        img{
+          overflow: hidden;
+        }
+    }
+    
+
+    .list_box{
+      background-color:gray;
+      width:700px;
+      height:100%;
+      margin: auto;
+      &__tabs_box{
+        display: flex;
+        width:100%;
+        height:80px;
+        &__notice{
+          width:50%;
+          height: 74px;
+
+          }
+        &__todo{
+          width:50%;
+          height:74px;
+
+        }
+        }
+      &__notice_list{
+        padding: 16px;
+        background-color: #fff;
+        width:calc(100%-40px);
+        height:80px;
+        display:flex;
+        justify-content: space-between;
+        font-size: 14px;
+        .nav_item{
+          line-height:80px;
+        }
+        &__text_box{
+          width:100%;
+          height:80px;
+          padding-left:20px;
+          &__text{
+          }
+          &__times{
+            float: left;
+            line-height: 24px;
+            display: flex;
+            &__time{
+              padding-left:5px ;
+              
+            }
+          }
+        }
+      }
+
+
+    } 
+}

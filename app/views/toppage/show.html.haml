@@ -1,0 +1,151 @@
+.user_page
+  .side_bar
+    %ul.side_bar__nav_bar_box
+      %li
+        = link_to "#",class: "nav_item"  do
+          お知らせ
+          %i.fas.fa-chevron-right
+      %li
+        = link_to "#",class: "nav_item"  do
+          やることリスト
+          %i.fas.fa-chevron-right
+      %li
+        = link_to "#",class: "nav_item"  do
+          いいね！一覧
+          %i.fas.fa-chevron-right
+      %li
+        = link_to "#",class: "nav_item"  do
+          出品する
+          %i.fas.fa-chevron-right
+      %li
+        = link_to "#",class: "nav_item"  do
+          出品した商品-出品中
+          %i.fas.fa-chevron-right
+      %li
+        = link_to "#",class: "nav_item"  do
+          出品した商品-取引中
+          %i.fas.fa-chevron-right
+      %li
+        = link_to "#",class: "nav_item"  do
+          出品した商品-売却済み
+          %i.fas.fa-chevron-right
+      %li
+        = link_to "#",class: "nav_item"  do
+          購入した商品-取引中
+          %i.fas.fa-chevron-right
+      %li
+        = link_to "#",class: "nav_item"  do
+          購入した商品-過去の取引
+          %i.fas.fa-chevron-right
+      %li
+        = link_to "#",class: "nav_item"  do
+          ニュース一覧
+          %i.fas.fa-chevron-right
+      %li
+        = link_to "#",class: "nav_item"  do
+          評価一覧
+          %i.fas.fa-chevron-right
+      %li
+        = link_to "#",class: "nav_item"  do
+          ガイド
+          %i.fas.fa-chevron-right
+      %li
+        = link_to "#",class: "nav_item"  do
+          お問い合わせ
+          %i.fas.fa-chevron-right
+
+
+
+
+    %h3.side_bar__merupay_box
+      メルペイ
+      %ul.side_bar__merupay_box__nav_bar
+        %li
+          = link_to "#",class: "nav_item"  do
+            売上・振込申請
+            %i.fas.fa-chevron-right
+        %li
+          = link_to "#",class: "nav_item"  do
+            ポイント
+            %i.fas.fa-chevron-right
+
+
+
+    %h3.side_bar__profile_box
+      設定
+      %ul.side_bar__profile_box__nav_bar
+        %li
+          = link_to "#",class: "nav_item"  do
+            プロフィール
+            %i.fas.fa-chevron-right
+        %li
+          = link_to "#",class: "nav_item"  do
+            発送元・お届先住所変更
+            %i.fas.fa-chevron-right
+        %li
+          = link_to "#",class: "nav_item"  do
+            支払い方法
+            %i.fas.fa-chevron-right
+        %li
+          = link_to "#",class: "nav_item"  do
+            メール/パスワード
+            %i.fas.fa-chevron-right
+        %li
+          = link_to "#",class: "nav_item"  do
+            本人情報
+            %i.fas.fa-chevron-right
+        %li
+          = link_to "#",class: "nav_item"  do
+            電話番号の確認
+            %i.fas.fa-chevron-right
+        %li
+          = link_to "#",class: "nav_item"  do
+            ログアウト
+            %i.fas.fa-chevron-right
+
+  .user_page_main
+    .user_box
+      %a.user_box__contents
+        %img{src:"//static.mercdn.net/images/member_photo_noimage_thumb.png", width:"60",height:"60",style:"user-select: auto;"}
+          %h2.user_box__contents__name
+            太郎
+        .user_box__contents__info
+          %div.user_box__contents__info__evalution
+            評価
+            %span#count
+            2
+          %div.user_box__contents__info__transactions
+            出品
+            %span#count
+            2
+        .user_box__contents__list
+
+
+    .list_box
+      .list_box__tabs_box
+        %a.list_box__tabs_box__notice
+          お知らせ
+        %a.list_box__tabs_box__todo
+          やることリスト
+      .list_box__notice_list
+        %img{src:"https://i.picsum.photos/id/444/350/250.jpg", width:"40",height:"40"}
+        .list_box__notice_list__text_box
+          .list_box__notice_list__text_box__text
+            「ゼンハイザー / イヤホンケース / イヤーピース」を購入しました。発送までしばらくお待ちください。
+          .list_box__notice_list__text_box__times
+            = link_to "#",class: "clock-icon"  do
+              %i.far.fa-clock
+            .list_box__notice_list__text_box__times__time
+              2日前
+        = link_to "#",class: "nav_item"  do
+          %i.fas.fa-chevron-right
+      .list_box__list
+
+    .purchased
+      .purchased__text_box
+      .purchased__notice
+      .purchased__todo
+      .purchased__notice_box
+      .purchased__list
+      
+    
