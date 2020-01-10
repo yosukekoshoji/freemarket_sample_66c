@@ -40,9 +40,9 @@
       padding: 30px 0 0 190px;
       display: flex;
       &__info{
-        padding-left: 20px;
+        padding-left: 16px;
         &__brand{
-          font-size: 12px;
+          font-size: 14px;
           font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
         }
         &__money{
@@ -53,7 +53,7 @@
         }
       }
     }
-    //支払い金額の部分
+
     &__total{
       display: flex;
       box-sizing: border-box;
