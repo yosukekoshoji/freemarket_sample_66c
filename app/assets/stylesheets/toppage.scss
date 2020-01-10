@@ -100,6 +100,11 @@
   }
   }
 }
+
+
+
+
+
 .wrapper{
   .top__content{
     font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
@@ -130,84 +135,6 @@
         }
       }
     }
-
-footer{
-    font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
-    font-weight: 500;
-    color: rgb(255, 255, 255);
-    padding: 0px 20px 10px;
-    background: rgb(33, 33, 33);
-    height: 360px;
-    margin: auto;
-
-
-
-  .footer-main{
-    display: flex;
-    margin: auto;
-    width: 1020px;
-
-    h1{
-      font-family: "游ゴシック体", YuGothic;
-      font-size: 16px;
-      font-weight: 700;
-      padding: 1em 0;
-    }
-    li{
-      font-family: "游ゴシック体", YuGothic;
-      padding: 7px;
-      font-size: 12px;
-      line-height: 1.5em;
-      list-style: none;
-      color: darkgray;
-    }
-    #policy{
-      width: 220px;
-    }
-    i{
-      font-size: 30px;
-      margin-right: 15px;
-      margin-top: 15px;
-    }
-    &__freemarket{
-      width: 20%;
-    }
-    &__help-guide{
-      width: 21%;
-    }
-    &__privacy{
-      width: 40%;
-      .footer-main__privacys{
-        display: flex;
-      }
-
-    }
-
-    &__country{
-      width: auto;
-
-      
-    }
-
-  }
-
-  .footer-sub{
-    color: white;
-    margin: 30px auto 20px;
-    width: 70%;
-    margin: auto;
-    display: flex;
-
-    .footer-logo{
-      height: 40px;
-    }
-    .footer-inc{
-      margin: auto 300px;
-      font-size: 12px;
-    }
-
-  }
-
     &--main{
       background-color: rgb(245, 245, 245);
       .top__main-box{
@@ -287,5 +214,74 @@ footer{
     }
   }
 }
+}
+
+footer{
+  font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  padding: 0px 20px 10px;
+  background: rgb(33, 33, 33);
+  height: 360px;
+  margin: auto;
+  .footer-main{
+    display: flex;
+    margin: auto;
+    width: 1020px;
+      h1{
+        font-family: "游ゴシック体", YuGothic;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 1em 0;
+      }
+      li{
+        font-family: "游ゴシック体", YuGothic;
+        padding: 7px;
+        font-size: 12px;
+        line-height: 1.5em;
+        list-style: none;
+        color: darkgray;
+      }
+        #policy{
+          width: 220px;
+        }
+        i{
+          font-size: 30px;
+          margin-right: 15px;
+          margin-top: 15px;
+        }
+        &__freemarket{
+          width: 20%;
+        }
+        &__help-guide{
+          width: 21%;
+        }
+        &__privacy{
+          width: 40%;
+          .footer-main__privacys{
+            display: flex;
+          }
+        }
+        &__country{
+          width: auto;
+        }
+}
+.footer-sub{
+  color: white;
+  margin: 30px auto 20px;
+  width: 70%;
+  margin: auto;
+  display: flex;
+
+  .footer-logo{
+    height: 40px;
+  }
+  .footer-inc{
+    margin: auto 300px;
+    font-size: 12px;
+  }
 
 }
+}
+
+
