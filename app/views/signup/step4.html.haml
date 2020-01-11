@@ -1,0 +1,36 @@
+.steppage
+  .fmarket__logo.logo_left
+    = image_tag "/assets/images/SVG/fmarket_logo_red.svg"
+  .MemberInformationInput
+    .MemberInformationInput__title
+      住所入力
+    .MemberInformationInput__content
+      .MemberInformationInput__content--form
+        %form{:action => "#", :method => "post"}
+          .form_group
+            %label
+              カード番号
+            %span.form_require
+              必須
+            %br/
+            %input{:name => "name", :type => "text", :class => "input_default", :placeholder => "半角数字のみ"}/
+
+
+          .form_group
+          %label
+            有効期限
+          %span.form_require
+            必須
+          %br/
+          %input{:name => "name", :type => "text", :class => "input_default", :placeholder => "半角数字のみ"}/
+
+          .form_group
+          %label
+            セキュリティコード
+          %span.form_require
+            必須
+          %br/
+          %input{:name => "name", :type => "text", :class => "input_default", :placeholder => "カード背面4桁もしくは3桁の番号"}/
+
+          %button{:type => "submit", :class => "btn_red"}
+            次へ進む

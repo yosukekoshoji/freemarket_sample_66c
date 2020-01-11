@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   resources :signup do
     collection do
       get 'step1'
-      post 'step2'
-      post 'step3'
-      post  'step4'
-      post  'step5'
+      get 'step2'
+      get 'step3'
+      get  'step4'
+      get  'step5'
       get 'complete_signup'  #登録完了後
     end
   end
