@@ -10,4 +10,5 @@ Rails.application.routes.draw do
       get 'complete_signup'  #登録完了後
     end
   end
+  resources :items,only:[:index]
 end
