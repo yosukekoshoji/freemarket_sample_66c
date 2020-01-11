@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root "toppage#index"
+  root "toppage#show"
 end
