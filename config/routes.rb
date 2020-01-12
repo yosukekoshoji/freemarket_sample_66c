@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root "toppage#show"
+  root "toppage#index"
+  resources :items,only:[:index]
 end
