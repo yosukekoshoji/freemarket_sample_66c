@@ -6,26 +6,16 @@
       .item-content__photo--top
         %img(src="/assets/mochi.jpg" alt="mochi")
       .item-content__photo--bottom
-        .item-content__photo--bottom__pic
-          %img(src="/assets/strawberry.jpg" alt="strawberry")
-        .item-content__photo--bottom__pic
-          %img(src="/assets/strawberry.jpg" alt="strawberry")
-        .item-content__photo--bottom__pic
-          %img(src="/assets/strawberry.jpg" alt="strawberry")
-        .item-content__photo--bottom__pic
-          %img(src="/assets/strawberry.jpg" alt="strawberry")
-        .item-content__photo--bottom__pic
-          %img(src="/assets/strawberry.jpg" alt="strawberry")
-        .item-content__photo--bottom__pic
-          %img(src="/assets/strawberry.jpg" alt="strawberry")
-        .item-content__photo--bottom__pic
-          %img(src="/assets/strawberry.jpg" alt="strawberry")
-        .item-content__photo--bottom__pic
-          %img(src="/assets/strawberry.jpg" alt="strawberry")
-        .item-content__photo--bottom__pic
-          %img(src="/assets/strawberry.jpg" alt="strawberry")
-        .item-content__photo--bottom__pic
-          %img(src="/assets/strawberry.jpg" alt="strawberry")
+        = render partial: 'picture'
+        = render partial: 'picture'
+        = render partial: 'picture'
+        = render partial: 'picture'
+        = render partial: 'picture'
+        = render partial: 'picture'
+        = render partial: 'picture'
+        = render partial: 'picture'
+        = render partial: 'picture'
+        = render partial: 'picture'
     %table.item-content__table
       %tr
         %th
@@ -207,159 +197,23 @@
       =link_to "#" do
         hogehogeさんのその他の出品
     .recommends__user__items
-      .recommends__user__items--box
-        .recommends__user__items--box--photo
-          %img(src="/assets/mochi.jpg" alt="mochi")/
-        .recommends__user__items--box--about
-          %h2.recommends__user__items--box--about--name
-            煎餅
-          .recommends__user__items--box--about--details
-            .recommends__user__items--box--about--details--price
-              ¥2000
-            .recommends__user__items--box--about--details--likes
-              %i.far.fa-heart
-              5
-      .recommends__user__items--box
-        .recommends__user__items--box--photo
-          %img(src="/assets/mochi.jpg" alt="mochi")/
-        .recommends__user__items--box--about
-          %h2.recommends__user__items--box--about--name
-            煎餅
-          .recommends__user__items--box--about--details
-            .recommends__user__items--box--about--details--price
-              ¥2000
-            .recommends__user__items--box--about--details--likes
-              %i.far.fa-heart
-              5
-      .recommends__user__items--box
-        .recommends__user__items--box--photo
-          %img(src="/assets/mochi.jpg" alt="mochi")/
-        .recommends__user__items--box--about
-          %h2.recommends__user__items--box--about--name
-            煎餅
-          .recommends__user__items--box--about--details
-            .recommends__user__items--box--about--details--price
-              ¥2000
-            .recommends__user__items--box--about--details--likes
-              %i.far.fa-heart
-              5
-      .recommends__user__items--box
-        .recommends__user__items--box--photo
-          %img(src="/assets/mochi.jpg" alt="mochi")/
-        .recommends__user__items--box--about
-          %h2.recommends__user__items--box--about--name
-            煎餅
-          .recommends__user__items--box--about--details
-            .recommends__user__items--box--about--details--price
-              ¥2000
-            .recommends__user__items--box--about--details--likes
-              %i.far.fa-heart
-              5
-      .recommends__user__items--box
-        .recommends__user__items--box--photo
-          %img(src="/assets/mochi.jpg" alt="mochi")
-        .recommends__user__items--box--about
-          %h2.recommends__user__items--box--about--name
-            煎餅
-          .recommends__user__items--box--about--details
-            .recommends__user__items--box--about--details--price
-              ¥2000
-            .recommends__user__items--box--about--details--likes
-              %i.far.fa-heart
-              5
-      .recommends__user__items--box
-        .recommends__user__items--box--photo
-          %img(src="/assets/mochi.jpg" alt="mochi")/
-        .recommends__user__items--box--about
-          %h2.recommends__user__items--box--about--name
-            煎餅
-          .recommends__user__items--box--about--details
-            .recommends__user__items--box--about--details--price
-              ¥2000
-            .recommends__user__items--box--about--details--likes
-              %i.far.fa-heart
-              5
+      = render partial: 'elseitems'
+      = render partial: 'elseitems'
+      = render partial: 'elseitems'
+      = render partial: 'elseitems'
+      = render partial: 'elseitems'
+      = render partial: 'elseitems'
   .recommends__user
     .recommends__user__head
       =link_to "#" do
-        hogehogeさんのその他の出品
+        シャネルのその他の商品
     .recommends__user__items
-      .recommends__user__items--box
-        .recommends__user__items--box--photo
-          %img(src="/assets/mochi.jpg" alt="mochi")/
-        .recommends__user__items--box--about
-          %h2.recommends__user__items--box--about--name
-            煎餅
-          .recommends__user__items--box--about--details
-            .recommends__user__items--box--about--details--price
-              ¥2000
-            .recommends__user__items--box--about--details--likes
-              %i.far.fa-heart
-              5
-      .recommends__user__items--box
-        .recommends__user__items--box--photo
-          %img(src="/assets/mochi.jpg" alt="mochi")/
-        .recommends__user__items--box--about
-          %h2.recommends__user__items--box--about--name
-            煎餅
-          .recommends__user__items--box--about--details
-            .recommends__user__items--box--about--details--price
-              ¥2000
-            .recommends__user__items--box--about--details--likes
-              %i.far.fa-heart
-              5
-      .recommends__user__items--box
-        .recommends__user__items--box--photo
-          %img(src="/assets/mochi.jpg" alt="mochi")/
-        .recommends__user__items--box--about
-          %h2.recommends__user__items--box--about--name
-            煎餅
-          .recommends__user__items--box--about--details
-            .recommends__user__items--box--about--details--price
-              ¥2000
-            .recommends__user__items--box--about--details--likes
-              %i.far.fa-heart
-              5
-      .recommends__user__items--box
-        .recommends__user__items--box--photo
-          %img(src="/assets/mochi.jpg" alt="mochi")/
-        .recommends__user__items--box--about
-          %h2.recommends__user__items--box--about--name
-            煎餅
-          .recommends__user__items--box--about--details
-            .recommends__user__items--box--about--details--price
-              ¥2000
-            .recommends__user__items--box--about--details--likes
-              %i.far.fa-heart
-              5
-      .recommends__user__items--box
-        .recommends__user__items--box--photo
-          %img(src="/assets/mochi.jpg" alt="mochi")
-        .recommends__user__items--box--about
-          %h2.recommends__user__items--box--about--name
-            煎餅
-          .recommends__user__items--box--about--details
-            .recommends__user__items--box--about--details--price
-              ¥2000
-            .recommends__user__items--box--about--details--likes
-              %i.far.fa-heart
-              5
-      .recommends__user__items--box
-        .recommends__user__items--box--photo
-          %img(src="/assets/mochi.jpg" alt="mochi")/
-        .recommends__user__items--box--about
-          %h2.recommends__user__items--box--about--name
-            煎餅
-          .recommends__user__items--box--about--details
-            .recommends__user__items--box--about--details--price
-              ¥2000
-            .recommends__user__items--box--about--details--likes
-              %i.far.fa-heart
-              5
-  -# .recommends__categories
-    -# .recommends__categories__head
-      -# =link_to "#" do
-        -# シャネルのその他の商品
+      = render partial: 'elseitems'
+      = render partial: 'elseitems'
+      = render partial: 'elseitems'
+      = render partial: 'elseitems'
+      = render partial: 'elseitems'
+      = render partial: 'elseitems'
     
     .recommends__categories__items
 .bread-crumbs
