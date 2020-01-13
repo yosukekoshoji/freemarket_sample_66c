@@ -10,6 +10,10 @@ Rails.application.routes.draw do
       get 'done'
     end
   end
-  resources :mypages,only:[:index,:edit]
+  resources :mypages,only:[:index,:edit] do
+    collection do
+      get 'signout'
+    end
+  end
   resources :items,only:[:index,:show]
 end
