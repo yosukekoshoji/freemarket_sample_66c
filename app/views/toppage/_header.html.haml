@@ -1,6 +1,6 @@
 %header
   .top
-    = image_tag "/assets/images/SVG/fmarket_logo_red.svg", class: 'top--logo'
+    = image_tag "fmarket_logo_red.svg", class: 'top--logo'
     .top__search
       %i.fas.fa-search
   .bottom
@@ -12,7 +12,24 @@
         %i.fas.fa-tags
         ブランドから探す
     .bottom__sign
-      .bottom__sign--up
-        新規会員登録
-      .bottom__sign--in
-        ログイン
+      -# ログイン機能実装後コメントアウト外してください
+      -# - if user_signed_in?
+      .bottom__sign--login
+        %i.far.fa-heart
+          いいね！一覧
+      .bottom__sign--login
+        %i.far.fa-bell
+          お知らせ
+      .bottom__sign--login
+        %i.fas.fa-check
+          やることリスト
+      .bottom__sign--login
+        %i.fas.fa-surprise
+          マイページ
+    -# ログイン機能実装後コメントアウト外してください
+    -# - else
+    -#   .bottom__sign--up
+    -#     新規会員登録
+    -#   .bottom__sign--in
+    -#     ログイン
+      
