@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root "toppage#index"
   resources :signup do
     collection do
@@ -10,5 +11,6 @@ Rails.application.routes.draw do
       get 'complete_signup'  #登録完了後
     end
   end
-  resources :items,only:[:index]
+  resources :mypages,only:[:index]
+  resources :items,only:[:index,:show]
 end
