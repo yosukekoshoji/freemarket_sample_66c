@@ -63,7 +63,6 @@
     }
   }
   }   
-
   &__sign{
   display: flex;
   justify-content: space-around;
@@ -77,11 +76,12 @@
     border-width: 1px;
     border-style: solid;
     border-color: rgb(234, 53, 45);
-    // border-image: initial;
     border-radius: 4px;
     padding: 5px 10px;
-
-
+    a{
+      text-decoration: none;
+      color: white;
+    }
   }
     &--in{
     background-color: rgb(255, 255, 255);
@@ -94,6 +94,10 @@
     // border-image: initial;
     border-radius: 4px;
     padding: 5px 10px;
+    a{
+      text-decoration: none;
+      color: rgb(0, 149, 238);;
+    }
   }
   }
 }
