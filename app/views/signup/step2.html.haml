@@ -1,6 +1,7 @@
-.steppage.SignPage
+-# 電話番号で確認
+.steppage
   .fmarket__logo.logo_left
-    = image_tag "/assets/images/SVG/fmarket_logo_red.svg"
+    = render 'items/subheader'
   .MemberInformationInput
     .MemberInformationInput__title
       電話番号の確認
@@ -11,12 +12,16 @@
             %label
               携帯電話の番号
             %br/
-            %input{:name => "name", :type => "text", :class => "input_default", :placeholder => "携帯電話の番号を入力"}/ 
+            %input{:name => "tel", :type => "tel", :class => "input_default", :placeholder => "携帯電話の番号を入力"}/ 
             %br/
           %p
             本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+
+          -# 送信ボタン
           %button{:type => "submit", :class => "btn_red"}
             SMSを送信する
           %p
             電話番号は本人確認や不正利用防止のために利用します。他のユーザーに後悔されることはありません。
-          
+
+  -# フッターを呼び込み
+  = render "items/subfooter"

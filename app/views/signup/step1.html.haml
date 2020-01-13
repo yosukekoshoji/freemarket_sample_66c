@@ -1,31 +1,39 @@
+-# 基本的な個人情報入力フォーム
 .steppage
   .fmarket__logo.logo_left
-    = image_tag "/assets/images/SVG/fmarket_logo_red.svg"
+    = render 'items/subheader'
+    -# 入力フォーム全体
   .MemberInformationInput
+    -# 入力フォームのタイトル
     .MemberInformationInput__title
       会員情報入力
+
+      -# 入力フォーム中身
     .MemberInformationInput__content
       .MemberInformationInput__content--form
-        %form{:action => "#", :method => "post"}
+        %form{:action => "step2", :method => "post"}
+
+          -# ニックネーム入力
           .form_group
             %label
               ニックネーム
             %span.form_require
               必須
             %br/
-            %input{:name => "name", :type => "text", :class => "input_default", :placeholder => "例) メルカリ太郎"}/
+            %input{:name => "nickname", :type => "text", :class => "input_default", :placeholder => "例) メルカリ太郎"}/
             %br/
 
+          -# メールアドレス入力
           .form_group
             %label
               メールアドレス
             %span.form_require
               必須
             %br/
-            %input{:name => "name", :type => "text", :class => "input_default", :placeholder =>"PC・携帯どちらでも可"}/
+            %input{:name => "email", :type => "email", :class => "input_default", :placeholder =>"PC・携帯どちらでも可"}/
             %br/
             
-
+          -# パスワード入力
           .form_group
             %label
               パスワード
@@ -49,8 +57,8 @@
             必須
           %br/
           .form_flex
-            %input{:name => "name", :type => "text", :placeholder => "例) 山田", :class => "input_default half"}/
-            %input{:name => "name", :type => "text", :placeholder => "例) 彩", :class => "input_default half"}/
+            %input{:name => "first_name", :type => "text", :placeholder => "例) 山田", :class => "input_default half"}/
+            %input{:name => "last_name", :type => "text", :placeholder => "例) 彩", :class => "input_default half"}/
           %br/
           %label
             お名前カナ(全角)
@@ -58,43 +66,30 @@
             必須
           %br/
           .form_flex
-            %input{:name => "name", :type => "text",:placeholder => "例) ヤマダ", :class => "input_default"}/
-            %input{:name => "name", :type => "text",:placeholder => "例) アヤ", :class => "input_default"}/
-          %p
-            ※ 英字と数字の両方を含めて設定してください
-          %p
-            「次へ進む」のボタンを押すことにより、利用規約に同意したものとみなします
+            %input{:name => "first_name_rattle", :type => "text",:placeholder => "例) ヤマダ", :class => "input_default"}/
+            %input{:name => "last_name_rattle", :type => "text",:placeholder => "例) アヤ", :class => "input_default"}/
           %label
             生年月日 
           %span.form_require
             必須
+
+          -# 仮で作成、実装後コメントアウト外す
+          -# != sprintf(f.date_select(:birthday, prefix:'birthday',with_css_classes:'XXXXX', prompt:"--",use_month_numbers:true, start_year:Time.now.year, end_year:1900, date_separator:'%s'),'年','月')+'日'
           %div
-          %select#select_year{:name => "year"}>
+          %select#select_year{:name => "birthyear"}>
           年
           = succeed "\u{6708}" do
-            %select#select_month{:name => "month"}
+            %select#select_month{:name => "birthmonth"}
           = succeed "\u{65e5}" do
-            %select#select_day{:name => "day"}
+            %select#select_day{:name => "birthday"}
           %p.form_info
             ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
           .TermsOfService
             「次へ進む」のボタンを押すことにより、利用規約に同意したものとみなします
+
+          -# 送信ボタン
           %button{:type => "submit", :class => "btn_red"}
             次へ進む
 
-
-
-  
-      
-
-
-
-  -# %form{:action => "#", :method => "post"}
-  -#   %p
-  -#     お名前（必須）：
-  -#     %br/
-  -#     %input{:name => "name", :type => "text"}/
-  -#   %p
-  -#     メールアドレス：
-  -#     %br/
-  -#     %input{:name => "mail", :type => "text"}/
+  -# フッターを呼び込み
+  = render "items/subfooter"

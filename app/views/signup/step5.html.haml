@@ -1,6 +1,6 @@
 .steppage
   .fmarket__logo.logo_left
-    = image_tag "/assets/images/SVG/fmarket_logo_red.svg"
+    = render 'items/subheader'
   .MemberInformationInput
     .MemberInformationInput__title
       会員登録完了
@@ -10,6 +10,10 @@
           ありがとうございます。
         %p.completed__text
           会員登録が完了しました。
+
+        -# 送信ボタン
         %button{:type => "submit", :class => "btn_red"}
           メルカリをはじめる
-    
+  
+  -# フッターを呼び込み
+  = render "items/subfooter"

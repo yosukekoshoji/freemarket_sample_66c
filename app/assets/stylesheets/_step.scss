@@ -25,6 +25,10 @@
   line-height: 1.5; 
 }
 
+.input_default--harf {
+  width: 30%;
+}
+
 .form_info {
   color: #888;
 }
@@ -58,6 +62,10 @@
     .MemberInformationInput__content--form {
       max-width: 343px;
       margin: auto;
+      .Identification {
+        margin-top: 15px;
+        font-weight: bold;
+      }
       .Identification--text {
         font-size: 15px;
       }
@@ -72,4 +80,15 @@
       }
     }
   }
+}
+
+.type_Any {
+  background-color: rgb(231,231,231);
+}
+
+// 年月日選択
+#select_month,#select_year,#select_day {
+  height: 40px;
+  margin: 5px;
+  width: 60px;
 }
