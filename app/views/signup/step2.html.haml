@@ -7,18 +7,18 @@
       電話番号の確認
     .MemberInformationInput__content
       .MemberInformationInput__content--form
-        %form{:action => "#", :method => "post"}
+        %form{action: "#", method: "post"}
           .form_group
             %label
               携帯電話の番号
             %br/
-            %input{:name => "tel", :type => "tel", :class => "input_default", :placeholder => "携帯電話の番号を入力"}/ 
+            %input.input_default{name: "tel", type: "tel", placeholder: "携帯電話の番号を入力"}
             %br/
           %p
             本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
 
           -# 送信ボタン
-          %button{:type => "submit", :class => "btn_red"}
+          %button{type: "submit", class: "btn_red"}
             SMSを送信する
           %p
             電話番号は本人確認や不正利用防止のために利用します。他のユーザーに後悔されることはありません。

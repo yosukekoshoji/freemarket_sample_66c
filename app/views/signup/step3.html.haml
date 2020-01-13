@@ -7,7 +7,7 @@
       住所入力
     .MemberInformationInput__content
       .MemberInformationInput__content--form
-        %form{:action => "#", :method => "post"}
+        %form{action: "#", method: "post"}
 
           -# 郵便番号入力
           .form_group
@@ -16,7 +16,7 @@
             %span.form_require
               必須
             %br/
-            %input{:name => "zipcode", :type => "number", :class => "input_default", :placeholder => "郵便番号"}/ 
+            %input.input_default{name: "zipcode", type: "number", placeholder: "郵便番号"}
             %br/
 
             -# 都道府県名入力gem 'active_hash'使用
@@ -26,7 +26,7 @@
             %span.form_require
               必須
             %br/
-            %input{:name => "first_address", :type => "text", :class => "input_default", :placeholder => "北海道"}/ 
+            %input.input_default{name: "first_address", type: "text", placeholder: "北海道"}
             %br/
 
             -# 市区町村入力
@@ -36,7 +36,7 @@
             %span.form_require
               必須
             %br/
-            %input{:name => "second_address", :type => "text", :class => "input_default", :placeholder => "例) 横浜市緑区"}/ 
+            %input.input_default{name: "second_address", type: "text", placeholder: "例) 横浜市緑区"}
             %br/
 
             -# 番地入力
@@ -46,7 +46,7 @@
             %span.form_require
               必須
             %br/
-            %input{:name => "third_address", :type => "text", :class => "input_default", :placeholder => "例) 青山1-1-1"}/ 
+            %input.input_default{name: "third_address", type: "text", placeholder: "例) 青山1-1-1"}
             %br/
 
 
@@ -57,7 +57,7 @@
             %span.form_require.type_Any
               任意
             %br/
-            %input{:name => "name", :type => "text", :class => "input_default", :placeholder => "例) 柳ビル103"}/ 
+            %input.input_default{name: "name", type: "text", placeholder: "例) 柳ビル103"}
             %br/
 
           -# 電話番号入力
@@ -67,11 +67,11 @@
             %span.form_require.type_Any
               任意
             %br/
-            %input{:name => "phone_number", :type => "number", :class => "input_default", :placeholder => "例) 09012345678"}/ 
+            %input.input_default{name: "phone_number", type: "number", placeholder: "例) 09012345678"}
             %br/
 
             -# 送信ボタン
-            %button{:type => "submit", :class => "btn_red"}
+            %button{type: "submit", class: "btn_red"}
               次へ進む
 
   -# フッターを呼び込み
