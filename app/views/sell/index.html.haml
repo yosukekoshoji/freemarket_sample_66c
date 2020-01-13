@@ -25,16 +25,14 @@
               商品名
             %span
               必須
-          .sell__input
-            %input.item-name{placeholder: "商品名（必須 40文字まで)", type: "text", :value => ""}/
+          %input.item-name{placeholder: "商品名（必須 40文字まで)", type: "text", :value => ""}/
         .sell--item-intro
           .sell__line
             %h3
               商品の説明
             %span
               必須
-          .sell__input
-            箱
+          %input.item-intro{placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", type: "text", :value => ""}/
       .sell__form--details
         .left-content
           商品の詳細
@@ -44,15 +42,19 @@
               カテゴリー
             %span
               必須
-          .sell__input
-            箱
+          %select.sell__item-categry
+            %option ---
+            %option レディース
+            %option メンズ
           .sell__line
             %h3
               商品の状態
             %span
               必須
-          .sell__input
-            箱
+          %select.sell__item-categry
+            %option ---
+            %option レディース
+            %option メンズ
       .sell__form--delivery
         .left-content
           配送について
@@ -63,22 +65,28 @@
               配送料の負担
             %span
               必須
-          .sell__input
-            箱
+          %select.sell__item-categry
+            %option ---
+            %option レディース
+            %option メンズ
           .sell__line
             %h3
               発送元の地域
             %span
               必須
-          .sell__input
-            箱
+          %select.sell__item-categry
+            %option ---
+            %option レディース
+            %option メンズ
           .sell__line
             %h3
               発送までの日数
             %span
               必須
-          .sell__input
-            箱
+          %select.sell__item-categry
+            %option ---
+            %option レディース
+            %option メンズ
 
       .sell__form--plice
         .left-content
@@ -90,8 +98,7 @@
               価格
             %span
               必須
-          .sell__input
-            箱
+          %input.item-plice{placeholder: "例）300円", type: "text", :value => ""}/
           .sell__fee
             販売手数料 (10%)-
           .sell__profit
@@ -100,11 +107,11 @@
       .sell__form--submit
         %div
           %p
-            -#  = link_to 禁止されている出品、行為を必ずご確認ください。
+            禁止されている出品、行為を必ずご確認ください。
           %p
-          またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
+            またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
           %p
-          また、出品をもちまして加盟店規約に同意したことになります。
+            また、出品をもちまして加盟店規約に同意したことになります。
         .sell__form--btn
           出品する
         .sell__form--back
