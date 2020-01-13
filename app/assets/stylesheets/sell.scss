@@ -104,15 +104,20 @@
       &--delivery{
         display: flex;
         justify-content: space-between;
-
         border: solid 1px rgb(245, 245, 245);
         padding: 40px;
+        i{
+          color: #0099e8;
+        }
       }
       &--plice{
         display: flex;
         justify-content: space-between;
         border: solid 1px rgb(245, 245, 245);
         padding: 40px;
+        i{
+          color: #0099e8;
+        }
       }
 
       &--submit{
