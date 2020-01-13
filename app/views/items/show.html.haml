@@ -4,7 +4,7 @@
   .item-content.clearfix
     .item-content__photo
       .item-content__photo--top
-        %img(src="/assets/mochi.jpg" alt="mochi")
+        =image_tag "mochi.jpg"
       .item-content__photo--bottom
         = 10.times do
           = render partial: 'picture'
@@ -13,7 +13,7 @@
         %th
           出品者
         %td
-          %a(href="#")
+          =link_to do
             ユーザー
           .rating
             .rating__counts
@@ -127,11 +127,11 @@
           いいね!
         %span
           3
-      %a{href: 'https://www.google.co.jp/', class: "item-btn report"}
+      =link_to class: "item-btn report" do
         %i.far.fa-flag
         %span 不適切な内容の報告
     .item-buttons--right
-      %a{href: 'https://www.google.co.jp/'}
+      =link_to do
         %i.fas.fa-lock
         %span あんしん・あんぜんへの取り組み
 
@@ -141,10 +141,10 @@
     .item-comments__content__form.clearfix
       %ul
         %li
-          %a(href="#")
+          =link_to do
             %figure
               %div
-                %img(src="/assets/mako2.jpg" alt="#")
+                = image_tag "mako2.jpg"
               %figcaption
                 真子
           .message
@@ -202,7 +202,7 @@
 .bread-crumbs
   %ul.bread-crumbs__box
     %li
-      %a(href="#") メルカリ
+      =link_to 'メルカリ'
       %i.fas.fa-chevron-right
     %li
-      %a(href="#") イチゴ大福６個入り
+      =link_to 'イチゴ大福６個入り'
