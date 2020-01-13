@@ -6,16 +6,8 @@
       .item-content__photo--top
         %img(src="/assets/mochi.jpg" alt="mochi")
       .item-content__photo--bottom
-        = render partial: 'picture'
-        = render partial: 'picture'
-        = render partial: 'picture'
-        = render partial: 'picture'
-        = render partial: 'picture'
-        = render partial: 'picture'
-        = render partial: 'picture'
-        = render partial: 'picture'
-        = render partial: 'picture'
-        = render partial: 'picture'
+        = 10.times do
+          = render partial: 'picture'
     %table.item-content__table
       %tr
         %th
@@ -197,24 +189,15 @@
       =link_to "#" do
         hogehogeさんのその他の出品
     .recommends__user__items
-      = render partial: 'elseitems'
-      = render partial: 'elseitems'
-      = render partial: 'elseitems'
-      = render partial: 'elseitems'
-      = render partial: 'elseitems'
-      = render partial: 'elseitems'
+      = 6.times do
+        = render partial: 'elseitems'
   .recommends__user
     .recommends__user__head
       =link_to "#" do
         シャネルのその他の商品
     .recommends__user__items
-      = render partial: 'elseitems'
-      = render partial: 'elseitems'
-      = render partial: 'elseitems'
-      = render partial: 'elseitems'
-      = render partial: 'elseitems'
-      = render partial: 'elseitems'
-    
+      = 6.times do
+        = render partial: 'elseitems'
     .recommends__categories__items
 .bread-crumbs
   %ul.bread-crumbs__box
