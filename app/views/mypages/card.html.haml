@@ -1,0 +1,18 @@
+.header
+  = render  'toppage/header'
+.user_page
+  .side_bar
+  = render  'shared/side_bar'
+  .signout-content
+    %form.signout-content__form(action="")
+      %button.signout-content__form--btn
+        クレジットカードを登録する
+-# .header
+-#   = render 'toppage/header'
+-# .user_page
+-#   .side_bar
+-#     = render 'shared/side_bar'
+-#   .signout-content
+-#     %form.signout-content__form(action="")
+-#       %button.signout-content__form--btn
+-#         ログアウト
