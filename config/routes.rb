@@ -10,6 +10,6 @@ Rails.application.routes.draw do
       get 'done'
     end
   end
-  resources :mypages,only:[:index]
+  resources :mypages,only:[:index,:edit]
   resources :items,only:[:index,:show]
 end
