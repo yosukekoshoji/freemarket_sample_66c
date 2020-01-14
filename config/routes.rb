@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :mypages,only:[:index,:edit] do
     collection do
       get 'card'
+      get 'signout'
     end
   end
   resources :items,only:[:index,:show]
