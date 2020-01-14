@@ -1,9 +1,10 @@
 = render "header"
 .wrapper
+  = render  "header"
   .top__content
     .top__content--header
       %h1
-        人気のカテゴリー
+        人気のカテゴリ
       .top__content--header--list
         %ul
           %li
@@ -36,7 +37,7 @@
         .top__main-m1
           %ul
             = render partial: "item"
-              
+
 
   .top__content
     .top__content--header
@@ -74,5 +75,6 @@
         .top__main-m1
           %ul
             = render partial: "item"
-= render "footer"
-
+  = render "shared/new-item"
+  -# フッターを呼び込み
+  = render "footer"
