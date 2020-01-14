@@ -16,5 +16,5 @@ Rails.application.routes.draw do
       get 'signout'
     end
   end
-  resources :items,only:[:index,:show]
+  resources :items,only:[:index,:new,:create,:show]
 end

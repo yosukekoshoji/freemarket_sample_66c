@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  seller: 
+  buyer: 
+  name: MyString
+  price: 1
+  shipping_date: 2020-01-14
+  condition: MyString
+  delivery_method: MyString
+  region: MyString
+  postage: MyString
+  image: 
+
+two:
+  seller: 
+  buyer: 
+  name: MyString
+  price: 1
+  shipping_date: 2020-01-14
+  condition: MyString
+  delivery_method: MyString
+  region: MyString
+  postage: MyString
+  image: 
