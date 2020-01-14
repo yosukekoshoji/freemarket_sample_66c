@@ -1,15 +1,15 @@
-// Place all the styles related to the sell controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 .sell__main{
   .sell__line{
     display: flex;
     h3{
-      font-size: 20px;
+      font-size: 16px;
     }
     span{
       background-color: #ea352d;
       margin-left: 7px;
+      color: white;
+      font-size: 12px;
+      padding: 2px 4px;
     }
     p{
       font-size: 10px;
@@ -61,6 +61,9 @@
       &--img{
         border: solid 1px rgb(245, 245, 245);
         padding: 40px;
+        p{
+          font-size: 12px;
+        }
         .upload{
           width: 100%;
           &--group{
@@ -68,6 +71,8 @@
             position: relative;
             height: 250px;
             margin: auto;
+            border: 1px dashed #ccc;
+            height: 162px;
             &--text{
               position: absolute;
               top: 50%;
@@ -97,7 +102,6 @@
       &--details{
         display: flex;
         justify-content: space-between;
-
         border: solid 1px rgb(245, 245, 245);
         padding: 40px;
       }
