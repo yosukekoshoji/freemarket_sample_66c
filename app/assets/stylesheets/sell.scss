@@ -1,8 +1,13 @@
+a{
+  text-decoration: none;
+  color: #0099e8;
+}
 .sell__main{
   .sell__line{
     display: flex;
     h3{
-      font-size: 16px;
+      font-size: 14px;
+      font-weight: bold;
     }
     span{
       background-color: #ea352d;
@@ -10,6 +15,7 @@
       color: white;
       font-size: 12px;
       padding: 2px 4px;
+      border-radius: 2px;
     }
     p{
       font-size: 10px;
@@ -47,6 +53,10 @@
     margin: auto;
     width: 700px;
     background-color: white;
+    .left-content{
+      color: #888;
+      font-size: 14px;
+    }
     .sell__top{
     border: solid 1px rgb(245, 245, 245);
     h1{
@@ -66,6 +76,7 @@
         }
         .upload{
           width: 100%;
+          margin-top: 16px;
           &--group{
             background-color: #f5f5f5;
             position: relative;
@@ -93,10 +104,12 @@
       &--name{
         border: solid 1px rgb(245, 245, 245);
         padding: 40px;
-        .item-name{
-        }
-        .item-intro{
+        .sell--item-intro{
           min-height: 104px;
+          margin-top: 40px;
+          .item-intro{
+            min-height: 104px;
+          }
         }
       }
       &--details{
@@ -104,12 +117,29 @@
         justify-content: space-between;
         border: solid 1px rgb(245, 245, 245);
         padding: 40px;
+        .left-content{
+
+        }
+        .right-content{
+          width: 400px;
+          margin: 0;
+          .sell__line:nth-child(3){
+            margin-top: 40px;
+          }
+        }
       }
       &--delivery{
         display: flex;
         justify-content: space-between;
         border: solid 1px rgb(245, 245, 245);
         padding: 40px;
+        .right-content{
+          width: 400px;
+          .sell__line:nth-child(3),
+          .sell__line:nth-child(5){
+            margin-top: 40px;
+          }
+        }
         i{
           color: #0099e8;
         }
@@ -122,18 +152,81 @@
         i{
           color: #0099e8;
         }
+        .right-content{
+          width: 400px;
+          .price-box{
+            display: flex;
+            padding-bottom: 24px;
+            align-items: center;
+            .sell__line{
+              width: 50%;
+            }
+            .input__box{
+              display: flex;
+              justify-content: flex-end;  
+              align-items: center;
+              .item-price{
+                text-align: right;
+                width: 50%;
+                margin: 0 0 0 5%;
+  
+            }}
+
+          }
+          
+          .sell__fee{
+            padding: 24px 0;
+            border-top: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+          }
+          .sell__profit{
+            padding: 24px 0;
+            border-top: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+          }
+        }
+
       }
 
       &--submit{
         border: solid 1px rgb(245, 245, 245);
         padding: 40px;
+        &--sentence{
+          line-height: 1.5;
+          p{
+            display: inline-block;
+            font-size: 14px;
+          }
+          a{
+            font-size: 14px;
+          }
+        }
         .sell__form--btn{
           background-color: #ea352d;
+          text-align: center;
+          color: white;
+          margin: 40px 0 0;
+          line-height: 48px;
+          cursor: pointer;
+          width: 100%;
+          display: block;
+          font-size: 14px;
         }
         .sell__form--back{
           background: #aaa;
           border: 1px solid #aaa;
           color: #fff;
+          text-align: center;
+          margin: 24px auto 0;
+          width: 45%;
+          line-height: 48px;
+          font-size: 14px;
+          display: block;
+          text-decoration: none;
         }
       }
     }
