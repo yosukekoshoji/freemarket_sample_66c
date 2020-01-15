@@ -30,7 +30,6 @@
 - has_one :profit
 - has_one :address
 
-## notices = お知らせ情報
 ## users_noticesテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -40,7 +39,6 @@
 - belongs_to :user
 - belongs_to :notice
 
-## todos = やることリスト
 ## users_todosテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -114,7 +112,6 @@ Column|Type|Options|
 |delivery_method|string|-------|
 |region|string|null: false|
 |postage|integer|------|
-|image_id|references|null: false, foreign_key: true|
 
 
 ### Association

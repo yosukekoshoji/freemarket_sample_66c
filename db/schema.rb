@@ -10,16 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_14_041630) do
+ActiveRecord::Schema.define(version: 2020_01_15_053953) do
 
-  create_table "addresses", force: :cascade do |t|
-    t.string "zipcode"
-    t.string "prefecture"
-    t.string "first_address"
-    t.string "second_adderess"
-    t.string "third_address"
+  create_table "categories", force: :cascade do |t|
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "ancestry"
+    t.index ["ancestry"], name: "index_categories_on_ancestry"
+    t.index ["name"], name: "index_categories_on_name"
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.text "image", null: false
+    t.integer "item_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_images_on_item_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -32,41 +39,11 @@ ActiveRecord::Schema.define(version: 2020_01_14_041630) do
     t.string "delivery_method", null: false
     t.string "region", null: false
     t.string "postage", null: false
-    t.integer "image_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["buyer_id"], name: "index_items_on_buyer_id"
-    t.index ["image_id"], name: "index_items_on_image_id"
     t.index ["name"], name: "index_items_on_name"
     t.index ["seller_id"], name: "index_items_on_seller_id"
-  end
-
-  create_table "pays", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "card_number"
-    t.integer "year"
-    t.integer "momth"
-    t.integer "security_number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_pays_on_user_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "nicname", default: "", null: false
-    t.string "first_name", default: "", null: false
-    t.string "last_name", default: "", null: false
-    t.string "first_name_rattle", default: "", null: false
-    t.string "last_name_rattle", default: "", null: false
-    t.integer "birthyear", null: false
-    t.integer "birthmonth", null: false
-    t.integer "birthday", null: false
-    t.text "introduction"
-    t.text "image"
-    t.string "password", default: "", null: false
-    t.integer "phone_number", null: false
-    t.string "email", default: "", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end
