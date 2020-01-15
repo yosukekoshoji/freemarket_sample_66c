@@ -12,16 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_01_14_041630) do
 
-  create_table "addresses", force: :cascade do |t|
-    t.string "zipcode"
-    t.string "prefecture"
-    t.string "first_address"
-    t.string "second_adderess"
-    t.string "third_address"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "items", force: :cascade do |t|
     t.integer "seller_id"
     t.integer "buyer_id"
@@ -39,34 +29,6 @@ ActiveRecord::Schema.define(version: 2020_01_14_041630) do
     t.index ["image_id"], name: "index_items_on_image_id"
     t.index ["name"], name: "index_items_on_name"
     t.index ["seller_id"], name: "index_items_on_seller_id"
-  end
-
-  create_table "pays", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "card_number"
-    t.integer "year"
-    t.integer "momth"
-    t.integer "security_number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_pays_on_user_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "nicname", default: "", null: false
-    t.string "first_name", default: "", null: false
-    t.string "last_name", default: "", null: false
-    t.string "first_name_rattle", default: "", null: false
-    t.string "last_name_rattle", default: "", null: false
-    t.integer "birthyear", null: false
-    t.integer "birthmonth", null: false
-    t.integer "birthday", null: false
-    t.text "introduction"
-    t.text "image"
-    t.string "password", default: "", null: false
-    t.integer "phone_number", null: false
-    t.string "email", default: "", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end
