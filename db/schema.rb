@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_01_15_053953) do
 
-  create_table "categories", force: :cascade do |t|
+  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -21,17 +21,15 @@ ActiveRecord::Schema.define(version: 2020_01_15_053953) do
     t.index ["name"], name: "index_categories_on_name"
   end
 
-  create_table "images", force: :cascade do |t|
+  create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "image", null: false
-    t.integer "item_id", null: false
+    t.bigint "item_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_images_on_item_id"
   end
 
-  create_table "items", force: :cascade do |t|
-    t.integer "seller_id"
-    t.integer "buyer_id"
+  create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.integer "price", null: false
     t.date "shipping_date", null: false
@@ -41,9 +39,8 @@ ActiveRecord::Schema.define(version: 2020_01_15_053953) do
     t.string "postage", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["buyer_id"], name: "index_items_on_buyer_id"
     t.index ["name"], name: "index_items_on_name"
-    t.index ["seller_id"], name: "index_items_on_seller_id"
   end
 
+  add_foreign_key "images", "items"
 end
