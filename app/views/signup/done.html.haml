@@ -1,0 +1,19 @@
+.steppage
+  .fmarket__logo.logo_left
+    = render 'items/subheader'
+  .MemberInformationInput
+    .MemberInformationInput__title
+      会員登録完了
+    .MemberInformationInput__content
+      .MemberInformationInput__content--form
+        %p.completed__text
+          ありがとうございます。
+        %p.completed__text
+          会員登録が完了しました。
+
+        -# 送信ボタン
+        %button{type: "submit", class: "btn_red"}
+          メルカリをはじめる
+  
+  -# フッターを呼び込み
+  = render "items/subfooter"

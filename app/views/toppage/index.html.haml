@@ -1,9 +1,10 @@
-.wrapper
 
+.wrapper
+  = render  "header"
   .top__content
     .top__content--header
       %h1
-        人気のカテゴリー
+        人気のカテゴリ
       .top__content--header--list
         %ul
           %li
@@ -20,23 +21,9 @@
         = render partial: "category"
         .top__main-m1
           %ul
-            = render partial: "item"
-      .top__main-box
-        = render partial: "category"
-        .top__main-m1
-          %ul
-            = render partial: "item"
-      .top__main-box
-        = render partial: "category"
-        .top__main-m1
-          %ul
-            = render partial: "item"
-      .top__main-box
-        = render partial: "category"
-        .top__main-m1
-          %ul
-            = render partial: "item"
-              
+            - @items.each do |item|
+              = render partial: "item", locals: { item: item }
+
 
   .top__content
     .top__content--header
@@ -58,19 +45,9 @@
         = render partial: "category"
         .top__main-m1
           %ul
-            = render partial: "item"
-      .top__main-box
-        = render partial: "category"
-        .top__main-m1
-          %ul
-            = render partial: "item"
-      .top__main-box
-        = render partial: "category"
-        .top__main-m1
-          %ul
-            = render partial: "item"
-      .top__main-box
-        = render partial: "category"
-        .top__main-m1
-          %ul
-            = render partial: "item"
+            - @items.each do |item|
+              = render partial: "item", locals: { item: item }
+
+  = render "shared/new-item"
+  -# フッターを呼び込み
+  = render "footer"
