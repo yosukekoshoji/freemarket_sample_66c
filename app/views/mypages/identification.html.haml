@@ -12,7 +12,7 @@
             お客さまの本人情報をご登録ください。
             登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
           %p.identification__main__textbox__upload
-            %a{herf:'#', class:'upload_p'}
+            = link_to "#",class: "upload_p"  do
               本人確認書類のアップロードについて
               %i.fas.fa-chevron-right
             
@@ -96,7 +96,7 @@
         %h3{herf:"#", class:'entry_btn'}
           登録する
         .upload_text_box
-          %a{herf:'#', class:'upload_guidance'}
+          = link_to "#",class: "upload_guidance"  do
             本人確認書類のアップロードについて
           %i.fas.fa-chevron-right
 
