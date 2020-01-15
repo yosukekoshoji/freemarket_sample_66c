@@ -1,7 +1,7 @@
 class ToppageController < ApplicationController
   def index
-    @items =Item.all
-    @parents = Category.all.order("id ASC").limit(13)
+    @items =Item.includes(:images)
+    @parents = Category.where(ancestry: nil)
   end
 
   def show
