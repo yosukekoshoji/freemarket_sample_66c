@@ -13,6 +13,8 @@
         ブランドから探す
     .bottom__sign
       .bottom__sign--up
-        = link_to "新規会員登録", 'new_user_registration_path'
+        = link_to "新規会員登録", new_user_registration_path
       .bottom__sign--in
-        = link_to "ログイン", 'new_user_session_path'
+        = link_to "ログイン", new_user_session_path
+      -# .oooo
+        -# = link_to "ログアウト", destroy_user_session_path

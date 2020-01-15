@@ -1,6 +1,6 @@
-class CreatePays < ActiveRecord::Migration[5.2]
+class CreateCards < ActiveRecord::Migration[5.2]
   def change
-    create_table :pays do |t|
+    create_table :cards do |t|
       t.references  :user
       t.integer     :card_number
       t.integer     :year

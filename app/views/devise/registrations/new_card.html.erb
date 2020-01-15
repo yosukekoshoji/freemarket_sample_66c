@@ -1,0 +1,29 @@
+<h2>カード情報登録</h2>
+
+<%= form_for @card do |f| %>
+  <%= render "devise/shared/error_messages", resource: @card %>
+
+  <div class="field">
+    <%= f.label :card_number %><br />
+    <%= f.text_field :card_number %>
+  </div>
+    <div class="field">
+    <%= f.label :year %><br />
+    <%= f.text_field :year %>
+  </div>
+    <div class="field">
+    <%= f.label :momth %><br />
+    <%= f.text_field :momth %>
+  </div>
+    <div class="field">
+    <%= f.label :security_number %><br />
+    <%= f.text_field :security_number %>
+  </div>
+
+    <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+  
+<% end %>
+
+<%= render "devise/shared/links" %>

@@ -4,8 +4,9 @@ class CreateAddresses < ActiveRecord::Migration[5.2]
       t.string  :zipcode
       t.string  :prefecture
       t.string  :first_address
-      t.string  :second_adderess
+      t.string  :second_address
       t.string  :third_address
+      t.references :user
       t.timestamps
     end
   end
