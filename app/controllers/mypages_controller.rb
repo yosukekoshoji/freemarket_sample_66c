@@ -11,5 +11,5 @@ class MypagesController < ApplicationController
   
   def signout
   end
-  
+
 end

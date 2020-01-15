@@ -1,4 +1,6 @@
+= render "header"
 .wrapper
+  = render  "header"
   .top__content
     .top__content--header
       %h1
@@ -35,7 +37,7 @@
         .top__main-m1
           %ul
             = render partial: "item"
-              
+
 
   .top__content
     .top__content--header
@@ -73,5 +75,6 @@
         .top__main-m1
           %ul
             = render partial: "item"
-      = link_to items_path do
-        a
+  = render "shared/new-item"
+  -# フッターを呼び込み
+  = render "footer"
