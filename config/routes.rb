@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root "toppage#index"
+
   resources :signup do
     collection do
       get 'information'
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
     collection do
       get 'card'
       get 'signout'
+      get 'identification'
     end
   end
   resources :items,only:[:index,:new,:create,:show]
