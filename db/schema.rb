@@ -39,9 +39,11 @@ ActiveRecord::Schema.define(version: 2020_01_15_053953) do
     t.string "delivery_method", null: false
     t.string "region", null: false
     t.string "postage", null: false
+    t.integer "image_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["buyer_id"], name: "index_items_on_buyer_id"
+    t.index ["image_id"], name: "index_items_on_image_id"
     t.index ["name"], name: "index_items_on_name"
     t.index ["seller_id"], name: "index_items_on_seller_id"
   end
