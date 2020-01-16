@@ -22,7 +22,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create_tel
     @user = User.new(session["devise.regist_data"]["user"])
     @phone_number = PhoneNumber.new(tel_params)
-    # binding.pry
     unless @phone_number.valid?
       flash.now[:alert] = @user.errors.full_messages
       render :new_tel and return
@@ -38,7 +37,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user = User.new(session["devise.regist_data"]["user"])
     @phone_number = PhoneNumber.new(session["phone_number"]["phone_number"])
     @address = Address.new(address_params)
-    # binding.pry
     unless @address.valid?
       flash.now[:alert] = @address.errors.full_messages
       render :new_address and return
