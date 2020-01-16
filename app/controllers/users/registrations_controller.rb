@@ -16,8 +16,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @phone_number = @user.build_phone_number
     @address = @user.build_address
     @card = @user.build_card
-    @address = @user.build_address
-
     render :new_tel
   end
 
@@ -31,7 +29,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
       session["phone_number"] = {phone_number: @phone_number.attributes}
       session["phone_number"][:phone_number]= params[:phone_number]
-      @user.build_phone_number(@phone_number.attributes)
       @address = Address.new
       render :new_address
     end
@@ -58,7 +55,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @phone_number = PhoneNumber.new(session["phone_number"]["phone_number"])
     @address = Address.new(session["address"]["address"])
     @card = Card.new(card_params)
-    # binding.pry
     unless @card.valid?
       flash.now[:alert] = @card.errors.full_messages
       render :new_card and return
@@ -67,7 +63,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user.build_address(@address.attributes)
     @user.build_card(@card.attributes)
     @user.save
-    @address.save
     # sign_in(:user, @user)
     render :create_address
   end
