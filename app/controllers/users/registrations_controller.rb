@@ -48,7 +48,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
     session["address"] = {address: @address.attributes}
     session["address"][:address]= params[:address]
-    @user.build_address(@address.attributes)
     @card = Card.new
     render :new_card
   end
@@ -64,12 +63,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
       flash.now[:alert] = @card.errors.full_messages
       render :new_card and return
     end
-    # @user.build_card(@card.attributes)
+    @user.build_phone_number(@phone_number.attributes)
+    @user.build_address(@address.attributes)
+    @user.build_card(@card.attributes)
     @user.save
-    # binding.pry
-    @phone_number.save
     @address.save
-    sign_in(:user, @user)
+    # sign_in(:user, @user)
     render :create_address
   end
 
@@ -83,12 +82,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def address_params
-    params.require(:address).permit(:zipcode, :prefecture,:first_address,:second_address,:third_address,:user_id).merge(user_id: @user.id)
+    params.require(:address).permit(:zipcode, :prefecture,:first_address,:second_address,:third_address)
   end
   
   def card_params
-    params.require(:card).permit(:card_number, :year, :momth, :security_number, :user_id)
+    params.require(:card).permit(:card_number, :year, :momth, :security_number)
   end
 end
-
 
