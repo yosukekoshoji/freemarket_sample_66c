@@ -1,7 +1,7 @@
 = render 'toppage/header'
 %section.item-container
-  .item-name
-    イチゴ大福
+  =link_to '#',class:"item-name" do
+    = @item.name
   .item-content.clearfix
     .item-content__photo
       .item-content__photo--top
@@ -81,7 +81,7 @@
       (税込)
     %span.item-price--fee
       送料込み
-  = link_to '購入画面に進む', 'http://www.google.co.jp/',class: "buy-btn"
+  = link_to '購入画面に進む', items_path ,class: "buy-btn"
   .item-description
     ご覧いただきありがとうございます(^^♪
 
@@ -203,7 +203,7 @@
 .bread-crumbs
   %ul.bread-crumbs__box
     %li
-      =link_to 'メルカリ'
+      =link_to 'メルカリ',root_path
       %i.fas.fa-chevron-right
     %li
       =link_to 'イチゴ大福６個入り'
