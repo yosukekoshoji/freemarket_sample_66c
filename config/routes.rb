@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   end
   root "toppage#index"
-
+  # 後にこちらのビューファイルと紐付けます。
   # resources :signup do
   #   collection do
   #     get 'information'
