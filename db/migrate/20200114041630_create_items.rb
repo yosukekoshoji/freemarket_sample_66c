@@ -9,8 +9,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.string :condition, null: false
       t.string :delivery_method, null: false
       t.string :region, null: false
-      t.string :postage, null: false
-      t.references :image, foreign_key: true, null: false
+      t.string :postage, foreign_key: true, null: false
 
       t.timestamps
     end

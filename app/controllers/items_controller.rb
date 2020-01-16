@@ -4,10 +4,14 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
+    @item.images.new
   end
 
   def create
-    Item.create(item_params)
+    @item = Item.new(item_params)
+    binding.pry
+    @item.save
+    redirect_to root_path
   end
 
   def show
@@ -16,5 +20,6 @@ class ItemsController < ApplicationController
 private
   
   def item_params
-    params.require(:item).permit(:name, :price, :shipping_date, :condition, :delivery_method, :region, :postage).merge(seller_id: current_user.id)
+    params.require(:item).permit(:name, :price, :shipping_date, :condition, :delivery_method, :region, :postage)
   end
+end
