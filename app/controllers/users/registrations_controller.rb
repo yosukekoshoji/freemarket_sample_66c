@@ -61,6 +61,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user.build_address(@address.attributes)
     @user.build_card(@card.attributes)
     @user.save
+    # ログアウトボタンを実装したらコメントアウトを外します。
     # sign_in(:user, @user)
     render :create_address
   end
