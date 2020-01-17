@@ -82,3 +82,4 @@ gem 'ancestry'
 gem 'active_hash'
 gem 'mysql2'
 gem 'erb2haml'
+gem "gretel"
