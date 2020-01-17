@@ -32,7 +32,7 @@
       -# 入力フォーム中身
     .MemberInformationInput__content
       .MemberInformationInput__content--form
-        %form{action: "step2", method: "post"}
+        %form{action: "", method: "post"}
 
           -# ニックネーム入力
           .form_group
@@ -110,6 +110,7 @@
 
           -# 送信ボタン
           %button{type: "submit", class: "btn_red"}
+            = linl_to "phone_numbers_path"
             次へ進む
 
   -# フッターを呼び込み

@@ -8,10 +8,14 @@ Rails.application.routes.draw do
     post 'addresses', to: 'users/registrations#create_address'
     post 'cards', to: 'users/registrations#create_card'
 
-
   end
   root "toppage#index"
+
+  resources :signup, only: [:index]
+
   # 後にこちらのビューファイルと紐付けます。
+
+
   # resources :signup do
   #   collection do
   #     get 'information'
@@ -21,6 +25,10 @@ Rails.application.routes.draw do
   #     get 'done'
   #   end
   # end
+
+
+
+
   resources :mypages,only:[:index,:edit] do
     collection do
       get 'card'
