@@ -7,16 +7,17 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def create
     @user = User.new(sign_up_params)
+    # binding.pry
     unless @user.valid?
       flash.now[:alert] = @user.errors.full_messages
-      render :card and return
+      render :information and return
     end
     session["devise.regist_data"] = {user: @user.attributes}
     session["devise.regist_data"][:user]["password"] = params[:user][:password]
     @phone_number = @user.build_phone_number
     @address = @user.build_address
     @card = @user.build_card
-    render :authentication
+    render :new_tel
   end
 
   def create_tel
@@ -29,7 +30,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       session["phone_number"] = {phone_number: @phone_number.attributes}
       session["phone_number"][:phone_number]= params[:phone_number]
       @address = Address.new
-      render :address
+      render :new_address
     end
 
   
@@ -44,7 +45,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     session["address"] = {address: @address.attributes}
     session["address"][:address]= params[:address]
     @card = Card.new
-    render :payment
+    render :new_card
   end
   
 
@@ -63,7 +64,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user.save
     # ログアウトボタンを実装したらコメントアウトを外します。
     # sign_in(:user, @user)
-    render :done
+    render :create_address
   end
 
   protected

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :signup, only:[:index]
   devise_for :users, controllers: {
     registrations: 'users/registrations',
   }
@@ -7,11 +8,9 @@ Rails.application.routes.draw do
     post 'phone_numbers', to: 'users/registrations#create_tel'
     post 'addresses', to: 'users/registrations#create_address'
     post 'cards', to: 'users/registrations#create_card'
-
   end
   root "toppage#index"
 
-  resources :signup, only: [:index]
 
   # 後にこちらのビューファイルと紐付けます。
 

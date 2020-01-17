@@ -28,6 +28,72 @@
     -# 入力フォームのタイトル
     .MemberInformationInput__title
       会員情報入力
+      -# 入力フォーム中身書き換え
+    .MemberInformationInput__content
+      .MemberInformationInput__content--form  
+      = form_for(@user, url: user_registration_path) do |f|
+        = render "devise/shared/error_messages", resource: @user
+        -# ニックネーム入力
+        .field
+          = f.label :nickname
+          %br/
+          = f.text_field :nickname
+        -# 名前登録
+        .field
+          = f.label :first_name
+          %br/
+          = f.text_field :first_name
+        -# 苗字登録
+        .field
+          = f.label :last_name
+          %br/
+          = f.text_field :last_name
+        -# 名前の振り仮名
+        .field
+          = f.label :first_name_rattle
+          %br/
+          = f.text_field :first_name_rattle
+        -# 苗字の振り仮名
+        .field
+          = f.label :last_name_rattle
+          %br/
+          = f.text_field :last_name_rattle
+        -# 生年
+        .field
+          = f.label :birthyear
+          %br/
+          = f.number_field :birthyear
+        -# 月
+        .field
+          = f.label :birthmonth
+          %br/
+          = f.number_field :birthmonth
+        -# 日
+        .field
+          = f.label :birthday
+          %br/
+          = f.number_field :birthday
+          -# メールアドレス
+        .field
+          = f.label :email
+          %br/
+          = f.email_field :email, autofocus: true, autocomplete: "email"
+          -# パスワード
+        .field
+          = f.label :password
+          - if @minimum_password_length
+            %em
+              (#{@minimum_password_length} characters minimum)
+          %br/
+          = f.password_field :password, autocomplete: "new-password"
+        .field
+          = f.label :password_confirmation
+          %br/
+          = f.password_field :password_confirmation, autocomplete: "new-password"
+          -# ボタン
+        .actions
+          = f.submit "Next"
+      = render "devise/shared/links"
 
       -# 入力フォーム中身
     .MemberInformationInput__content
@@ -110,8 +176,7 @@
 
           -# 送信ボタン
           %button{type: "submit", class: "btn_red"}
-            = linl_to "phone_numbers_path"
-            次へ進む
-
+            = link_to '次へ進む'
+            
   -# フッターを呼び込み
-  = render "items/subfooter"
+  -# = render "items/subfooter"
