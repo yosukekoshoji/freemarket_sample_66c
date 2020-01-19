@@ -7,10 +7,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def create
     @user = User.new(sign_up_params)
-    # binding.pry
     unless @user.valid?
       flash.now[:alert] = @user.errors.full_messages
-      render :information and return
+      render :new and return
     end
     session["devise.regist_data"] = {user: @user.attributes}
     session["devise.regist_data"][:user]["password"] = params[:user][:password]
@@ -54,6 +53,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @phone_number = PhoneNumber.new(session["phone_number"]["phone_number"])
     @address = Address.new(session["address"]["address"])
     @card = Card.new(card_params)
+
     unless @card.valid?
       flash.now[:alert] = @card.errors.full_messages
       render :new_card and return

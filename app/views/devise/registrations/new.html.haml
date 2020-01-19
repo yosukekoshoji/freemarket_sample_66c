@@ -91,12 +91,134 @@
           %span.form_require
             必須
           %br/
-          != sprintf(f.date_select(:birthday, prefix:'birthday',with_css_classes:'XXXXX', prompt:"--",use_month_numbers:true, start_year:Time.now.year, end_year:1900, date_separator:'%s'),'年','月')+'日'
+          = f.select :birthyear,:type => "text", placeholder:"" do
+            %option{:value => ''} --
+            %option{:value => '2020'} 2020
+            %option{:value => '2019'} 2019
+            %option{:value => '2018'} 2018
+            %option{:value => '2017'} 2017
+            %option{:value => '2016'} 2016
+            %option{:value => '2020'} 2015
+            %option{:value => '2019'} 2014
+            %option{:value => '2018'} 2013
+            %option{:value => '2017'} 2012
+            %option{:value => '2016'} 2011
+            %option{:value => '2020'} 2010
+            %option{:value => '2019'} 2009
+            %option{:value => '2018'} 2008
+            %option{:value => '2017'} 2007
+            %option{:value => '2016'} 2006
+            %option{:value => '2020'} 2005
+            %option{:value => '2019'} 2004
+            %option{:value => '2018'} 2003
+            %option{:value => '2017'} 2002
+            %option{:value => '2016'} 2001
+            %option{:value => '2020'} 2000
+            %option{:value => '1999'} 1999
+            %option{:value => '1999'} 1998
+            %option{:value => '1999'} 1997
+            %option{:value => '1999'} 1996 
+            %option{:value => '1999'} 1995
+            %option{:value => '1999'} 1994 
+            %option{:value => '1999'} 1993
+            %option{:value => '1999'} 1992 
+            %option{:value => '1999'} 1991
+            %option{:value => '1999'} 1990 
+            %option{:value => '1999'} 1989
+            %option{:value => '1999'} 1988 
+            %option{:value => '1999'} 1987
+            %option{:value => '1999'} 1986 
+            %option{:value => '1999'} 1985
+            %option{:value => '1999'} 1984 
+            %option{:value => '1999'} 1983
+            %option{:value => '1999'} 1982 
+            %option{:value => '1999'} 1981
+            %option{:value => '1999'} 1980 
+            %option{:value => '1999'} 1979
+            %option{:value => '1999'} 1978 
+            %option{:value => '1999'} 1977
+            %option{:value => '1999'} 1976 
+            %option{:value => '1999'} 1975
+            %option{:value => '1999'} 1974 
+            %option{:value => '1999'} 1973
+            %option{:value => '1999'} 1972
+            %option{:value => '1999'} 1971
+            %option{:value => '1999'} 1970 
+            %option{:value => '1999'} 1969
+            %option{:value => '1999'} 1968 
+            %option{:value => '1999'} 1967
+            %option{:value => '1999'} 1966 
+            %option{:value => '1999'} 1965
+            %option{:value => '1999'} 1964 
+            %option{:value => '1999'} 1963
+            %option{:value => '1999'} 1962 
+            %option{:value => '1999'} 1961
+            %option{:value => '1999'} 1960 
+            %option{:value => '1999'} 1959
+            %option{:value => '1999'} 1958 
+            %option{:value => '1999'} 1957
+            %option{:value => '1999'} 1956 
+            %option{:value => '1999'} 1955
+            %option{:value => '1999'} 1954
+            %option{:value => '1999'} 1953
+            %option{:value => '1999'} 1952 
+            %option{:value => '1999'} 1951
+            %option{:value => '1999'} 1950
+            年
+          = f.select :birthmonth, :type =>"text", placeholder:"" do
+            %option{:value => ''} --
+            %option{:value => '1'} 1
+            %option{:value => '2'} 2
+            %option{:value => '3'} 3
+            %option{:value => '4'} 4
+            %option{:value => '5'} 5
+            %option{:value => '6'} 6
+            %option{:value => '7'} 7
+            %option{:value => '8'} 8
+            %option{:value => '9'} 9
+            %option{:value => '10'} 10
+            %option{:value => '11'} 11
+            %option{:value => '12'} 12
+          月
+          = f.select :birthday, :type => "text", placeholder:""do
 
+            %option{:value => ''} --
+            %option{:value => '1'} 1
+            %option{:value => '2'} 2
+            %option{:value => '3'} 3
+            %option{:value => '4'} 4
+            %option{:value => '5'} 5
+            %option{:value => '6'} 6
+            %option{:value => '7'} 7
+            %option{:value => '8'} 8
+            %option{:value => '9'} 9
+            %option{:value => '10'} 10
+            %option{:value => '11'} 11
+            %option{:value => '12'} 12
+            %option{:value => ''} 13
+            %option{:value => '1'} 14
+            %option{:value => '2'} 15
+            %option{:value => '3'} 16
+            %option{:value => '4'} 17
+            %option{:value => '5'} 18
+            %option{:value => '6'} 19
+            %option{:value => '7'} 20
+            %option{:value => '8'} 21
+            %option{:value => '9'} 22
+            %option{:value => '10'} 23
+            %option{:value => '11'} 24
+            %option{:value => '12'} 25
+            %option{:value => ''} 26
+            %option{:value => '1'} 27
+            %option{:value => '2'} 28
+            %option{:value => '3'} 29
+            %option{:value => '4'} 30
+            %option{:value => '5'} 31
+          日
           %p.form_info
-            ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+          ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
           .TermsOfService
-            「次へ進む」のボタンを押すことにより、利用規約に同意したものとみなします
+          「次へ進む」のボタンを押すことにより、利用規約に同意したものとみなします
           .actions
             = f.submit "次へ進む",class: "btn_red"
 

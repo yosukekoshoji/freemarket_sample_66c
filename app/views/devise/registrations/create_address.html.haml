@@ -1,8 +1,3 @@
-%h2 登録が完了しました
-= link_to "トップへ戻る", root_path
-
-
-
 -#header部分
 %header.user-container
   .user-header
@@ -39,7 +34,6 @@
 
         -# 送信ボタン
         %button{type: "submit", class: "btn_red"}
-          メルカリをはじめる
-  
+          = link_to "メルカリをはじめる", root_path
   -# フッターを呼び込み
   = render "items/subfooter"
